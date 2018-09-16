@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-
+nslookup slash16.org | head -2

@@ -1,0 +1,4 @@
+I followed this steps:
+	- 'ping -c 1 slash16.org' to get the IP address
+	- 'curl ipinfo.io/ip_of_slash16.org/org'
+I found that the Internet Provider was Amazon.
