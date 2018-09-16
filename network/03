@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ifconfig en0
+ifconfig en1
