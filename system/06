@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ssh restart
+sudo service ssh restart

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ssh status
+sudo service ssh status
