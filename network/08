@@ -1,4 +1,4 @@
 I followed this steps:
-	- 'ping -c 1 slash16.org' to get the IP address
+	- 'ping -c 1 slash16.org | head -1 | awk '{print $3}' | sed 's/[():]//g'' to get the IP address
 	- 'curl ipinfo.io/ip_of_slash16.org/org'
-I found that the Internet Provider was Amazon.
+The Internet Provider was Amazon.

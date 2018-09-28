@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-
+sudo iptables -A INPUT -j REJECT
