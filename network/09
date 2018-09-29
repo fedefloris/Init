@@ -1,6 +1,6 @@
-PING 42.fr (10.52.1.12): 56 data bytes
-64 bytes from 10.52.1.12: icmp_seq=0 ttl=63 time=0.340 ms
+PING 42.fr (163.172.250.11): 56 data bytes
+64 bytes from 163.172.250.11: icmp_seq=1 ttl=55 time=8.26 ms
 
 --- 42.fr ping statistics ---
 1 packets transmitted, 1 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 0.340/0.340/0.340/0.000 ms
+round-trip min/avg/max/stddev = 8.263/8.263/8.263/0.000 ms
