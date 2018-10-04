@@ -1,2 +1,16 @@
 #!/usr/bin/env bash
 
+echo '#!/usr/bin/env bash
+if ! [ -f /var/log/crontab.hash ]; then
+	md5sum /etc/crontab > /var/log/crontab.hash
+fi
+check=$(md5sum -c /var/log/crontab.hash | cut -d " " -f2)
+if ! [ $check != "OK" ]; then
+	echo "/etc/crontab has been changed" | mail -s "/etc/crontab has been changed" root
+	md5sum /etc/crontab > /var/log/crontab.hash
+fi
+' > task
+chmod +x ./task
+sudo mv task /etc/cron.daily/
+echo "0 0 * * * /etc/cron.daily/task" | sudo crontab
+
