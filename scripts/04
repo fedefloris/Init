@@ -5,7 +5,7 @@ if ! [ -f /var/log/crontab.hash ]; then
 	md5sum /etc/crontab > /var/log/crontab.hash
 fi
 check=$(md5sum -c /var/log/crontab.hash | cut -d " " -f2)
-if ! [ $check != "OK" ]; then
+if [ $check != "OK" ]; then
 	echo "/etc/crontab has been changed" | mail -s "/etc/crontab has been changed" root
 	md5sum /etc/crontab > /var/log/crontab.hash
 fi
